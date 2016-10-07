@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table{
+                border: 1px transparent;
+            }
+            td, tr{
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <form enctype="multipart/form-data" action="" method="POST">
+            <table width="600px" border="1">
+                <tr bgcolor="#97d1f5">
+                    <td colspan="2"><center>FORMULARIO DE REGISTRO</center></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center>Nombre y apellidos</center></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Nombre y apellidos*:</td>
+                    <td bgcolor="#e6e6e6"><input name="nombreapellidos" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Nombre de usuario*:</td>
+                    <td bgcolor="#e6e6e6"><input name="nombreusuario" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Password*:</td>
+                    <td bgcolor="#e6e6e6"><input name="pass" type="text"></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center>Dirección</center></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Tipo de Via*:</td>
+                    <td bgcolor="#e6e6e6"><input name="via" type="radio">Calle<input name="via" type="radio">Avenida<input name="via" type="radio">Paseo</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Nombre de la via*:</td>
+                    <td bgcolor="#e6e6e6"><input name="nombrevia" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Numero:</td>
+                    <td bgcolor="#e6e6e6"><input name="numero" type="number"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Codigo Postal*:</td>
+                    <td bgcolor="#e6e6e6"><input name="cp" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Municipio:</td>
+                    <td bgcolor="#e6e6e6"><input name="municipio" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Provincia:</td>
+                    <td bgcolor="#e6e6e6"><select><option value="rioja">La Rioja</option></select></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center>Datos personales</center></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">DNI*:</td>
+                    <td bgcolor="#e6e6e6"><input name="dni" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Fecha de Nacimiento*:</td>
+                    <td bgcolor="#e6e6e6"><input name="born" type="date"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Email*:</td>
+                    <td bgcolor="#e6e6e6"><input name="mail" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Espacio Web:</td>
+                    <td bgcolor="#e6e6e6"><input name="web" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Telefono:</td>
+                    <td bgcolor="#e6e6e6"><input name="tfno" type="text"></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Fotos:</td>
+                    <td bgcolor="#e6e6e6"><input name="foto" type="file"></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center>Intereses</center></td>
+                </tr>
+                            <tr>
+                    <td bgcolor="#a5a5a5" align="right">Seleccione sus preferencias:</td>
+                    <td bgcolor="#e6e6e6"><input name="pref" type="checkbox">Deportes<input name="pref" type="checkbox">Música<input name="pref" type="checkbox">Cine<input name="pref" type="checkbox">Informática</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#a5a5a5" align="right">Color preferido:</td>
+                    <td bgcolor="#e6e6e6"><input name="color" type="color"></td>
+                </tr>
+                <tr bgcolor="#aaaaf6">
+                    <td colspan="2"><center><button>Enviar por GET sin validar</button></center></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

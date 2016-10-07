@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form width=300 enctype="multipart/form-data" action="" method="POST">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label  for="nombre">Nombre: </label>
+                <input type="text" name="nombre">
+                <label for="apellidos">Apellidos: </label>
+                <input type="text" name="apellidos"><br><br>
+                <label for="dni">DNI: </label>
+                <input type="text" name="dni">
+                <label for="mail">E-mail: </label>
+                <input type="text" name="mail"><br><br>
+                <label for="tfno">Telefono: </label>
+                <input type="number" name="tfno">
+                <label for="born">Fecha de nacimiento: </label>
+                <input type="date" name="born"><br><br>
+                <label for="foto">Foto: </label>
+                <input type="file" name="foto">
+            </fieldset>
+            <fieldset>
+                <legend>Experiencia Laboral</legend>
+                <textarea name="experencia" ></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Formacion Academica</legend>
+                <textarea name="formacion" ></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Idiomas</legend>
+                <label for="idioma1">Idioma materno: </label>
+                <input type="text" name="idioma1" >
+                <label for="idioma1">Idioma 2: </label>
+                <input type="text" name="idioma2" >
+                <label for="idioma1">Idioma 3: </label>
+                <input type="text" name="idioma3" >
+                <label for="idioma1">Idioma 4: </label>
+                <input type="text" name="idioma4" >
+            </fieldset>
+            <fieldset>
+                <legend>Datos de interes</legend>
+                <label for="carnet">¿Posee carnet de conducir?</label>
+                <input type="radio" name="carnet" >Si
+                <input type="radio" name="carnet" >No<br><br>
+                <label for="otros">Otros datos: </label><br>
+                <textarea name="otros" ></textarea>
+            </fieldset>
+        </form>
+    </body>
+</html>
