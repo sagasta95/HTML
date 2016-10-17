@@ -12,6 +12,7 @@ and open the template in the editor.
         <style>
             table{
                 border: 1px transparent;
+                width: 600px;
             }
             td, tr{
                 padding: 5px;
@@ -19,8 +20,8 @@ and open the template in the editor.
         </style>
     </head>
     <body>
-        <form enctype="multipart/form-data" action="" method="POST">
-            <table width="600px" border="1">
+        <form enctype="multipart/form-data" method="get">
+            <table>
                 <tr bgcolor="#97d1f5">
                     <td colspan="2"><center>FORMULARIO DE REGISTRO</center></td>
                 </tr>
@@ -29,34 +30,34 @@ and open the template in the editor.
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Nombre y apellidos*:</td>
-                    <td bgcolor="#e6e6e6"><input name="nombreapellidos" type="text"></td>
+                    <td bgcolor="#e6e6e6"><input name="nombreapellidos" required="required" type="text" size="55px"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Nombre de usuario*:</td>
-                    <td bgcolor="#e6e6e6"><input name="nombreusuario" type="text"></td>
+                    <td bgcolor="#e6e6e6"><input name="nombreusuario" required="required" type="text"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Password*:</td>
-                    <td bgcolor="#e6e6e6"><input name="pass" type="text"></td>
+                    <td bgcolor="#e6e6e6"><input name="pass" required="required" type="text"></td>
                 </tr>
                 <tr bgcolor="#aaaaf6">
                     <td colspan="2"><center>Dirección</center></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Tipo de Via*:</td>
-                    <td bgcolor="#e6e6e6"><input name="via" type="radio">Calle<input name="via" type="radio">Avenida<input name="via" type="radio">Paseo</td>
+                    <td bgcolor="#e6e6e6"><input name="via" type="radio" required="required">Calle<input name="via" type="radio" required="required">Avenida<input name="via" type="radio" required="required">Paseo</td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Nombre de la via*:</td>
-                    <td bgcolor="#e6e6e6"><input name="nombrevia" type="text"></td>
+                    <td bgcolor="#e6e6e6"><input name="nombrevia" type="text" required="required"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Numero:</td>
-                    <td bgcolor="#e6e6e6"><input name="numero" type="number"></td>
+                    <td bgcolor="#e6e6e6"><input name="numero" type="test" pattern="6[0-9]{8}"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Codigo Postal*:</td>
-                    <td bgcolor="#e6e6e6"><input name="cp" type="text"></td>
+                    <td bgcolor="#e6e6e6"><input name="cp" type="text" required="required" pattern="[0-9]{5}"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Municipio:</td>
@@ -71,15 +72,15 @@ and open the template in the editor.
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">DNI*:</td>
-                    <td bgcolor="#e6e6e6"><input name="dni" type="text"></td>
+                    <td bgcolor="#e6e6e6"><input name="dni" type="text" required="required" pattern="[0-9]{8}[A-Z]{1}"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Fecha de Nacimiento*:</td>
-                    <td bgcolor="#e6e6e6"><input name="born" type="date"></td>
+                    <td bgcolor="#e6e6e6"><input name="born" type="date" required="required"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Email*:</td>
-                    <td bgcolor="#e6e6e6"><input name="mail" type="text"></td>
+                    <td bgcolor="#e6e6e6"><input name="mail" type="text" required="required"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Espacio Web:</td>
@@ -87,7 +88,7 @@ and open the template in the editor.
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Telefono:</td>
-                    <td bgcolor="#e6e6e6"><input name="tfno" type="text"></td>
+                    <td bgcolor="#e6e6e6"><input name="tfno" type="number"></td>
                 </tr>
                 <tr>
                     <td bgcolor="#a5a5a5" align="right">Fotos:</td>
@@ -105,7 +106,9 @@ and open the template in the editor.
                     <td bgcolor="#e6e6e6"><input name="color" type="color"></td>
                 </tr>
                 <tr bgcolor="#aaaaf6">
-                    <td colspan="2"><center><button>Enviar por GET sin validar</button></center></td>
+                    <td colspan="2"><center>
+                        <input type="image" src='img/post.png' alt="submit" formmethod="post"><br>
+                        <button>Enviar por GET sin validar</button></center></td>
                 </tr>
             </table>
         </form>

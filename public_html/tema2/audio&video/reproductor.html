@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Reproductor</title>
+        <meta charset="UTF-8">
+        <script>
+            function play(){
+                var audio = document.getElementById("video1");
+                audio.play();
+            }
+            function pause(){
+                var audio = document.getElementById("video1");
+                audio.pause();
+            }
+            function stop(){
+                var audio = document.getElementById("video1");
+                audio.load();
+            }
+            function volumen(){
+                var audio = document.getElementById("video1");
+                var volumen = document.getElementById("volumen").value;
+                audio.volume = volumen;
+            }
+            function silenciar(){
+                var audio = document.getElementById("video1");
+                if(audio.muted == true){
+                    audio.muted = false;
+                    document.getElementById("btn_mute").innerHTML="SILENCIO=OFF";
+                }
+                else{
+                    audio.muted = true;
+                    document.getElementById("btn_mute").innerHTML="SILENCIO=ON";
+                }
+            }
+            function fail(e){
+                switch(e.target.error.code){
+                    case e.target.error.MEDIA_ERR_ABORTED:
+                        alert("Has abortado la reproduccion");
+                        break;
+                    case e.target.error.MEDIA_ERR_NETWORK:
+                        alert("Error de red");
+                        break;
+                    case e.target.error.MEDIA_ERR_DECODE:
+                        alert("Problema de corrupcion");
+                        break;
+                    case e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED:
+                        alert("Formato no soportado o archivo no encontrado");
+                        break;
+                    default:
+                        alert("Ocurrio un problema insesperado");
+                        break;
+                }
+            }
+        </script>
+    <body>
+        <table border="1">
+            <tr>
+                <td>
+                    <video  id="video1" onerror="fail(event)">
+                        <source src="video1.mp4" type="video/mp4"></source>
+                    </video>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="btn_play" onclick="play()">PLAY</button>
+                    <button id="btn_pause" onclick="pause()">PAUSE</button>
+                    <button id="btn_stop" onclick="stop()">STOP</button>
+                    <input id="volumen" type="range" min="0" max="1" step="0.1" onchange="volumen()"/>
+                    <button id="btn_mute" onclick="silenciar()">SILENCIO=OFF</button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
