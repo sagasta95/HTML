@@ -9,6 +9,34 @@ and open the template in the editor.
         <title>Reproductor</title>
         <meta charset="UTF-8">
         <script>
+            function play(){
+                var audio = document.getElementById("video1");
+                audio.play();
+            }
+            function pause(){
+                var audio = document.getElementById("video1");
+                audio.pause();
+            }
+            function stop(){
+                var audio = document.getElementById("video1");
+                audio.load();
+            }
+            function volumen(){
+                var audio = document.getElementById("video1");
+                var volumen = document.getElementById("volumen").value;
+                audio.volume = volumen;
+            }
+            function silenciar(){
+                var audio = document.getElementById("video1");
+                if(audio.muted == true){
+                    audio.muted = false;
+                    document.getElementById("btn_mute").innerHTML="SILENCIO=OFF";
+                }
+                else{
+                    audio.muted = true;
+                    document.getElementById("btn_mute").innerHTML="SILENCIO=ON";
+                }
+            }
             function fail(e){
                 switch(e.target.error.code){
                     case e.target.error.MEDIA_ERR_ABORTED:
