@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>EJ31</title> bn
+        <meta charset="UTF-8">
+        <style>
+            article, img{
+                position: relative;
+                margin: auto;
+                width: 500px;
+                height: 200px;
+                outline: solid 10px #eee;
+                border: solid 1px #ccc;
+            }
+            article:before , article:after{
+                content: "";
+                position: absolute;
+                width: 240px;
+                left: 15px;
+                top: 192px;
+                box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.56);
+                z-index: -1;
+                transform: rotate(-2deg);
+            }
+            article:after{
+                left: 250px;
+                transform: rotate(2deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <article><img src="skyline.jpg"></article>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <style>
+            #galeria{
+                width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 60px;
+                margin-bottom: 60px;
+            }
+            figure{
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                padding: 10px;
+                padding-bottom: 25px;
+                background: #eee;
+                border: 1px solid #fff;
+                box-shadow: 0px 2px 15px #333;
+                text-align: center;
+            }
+            img{
+                width: 278px;
+            }
+            .a{
+                z-index: 1;
+                transform: rotate(5deg);
+            }
+            .b{
+                z-index: 3;
+                transform: rotate(-5deg);
+            }
+            .c{
+                z-index: 2;
+                transform: rotate(-5deg);
+            }
+            .d{
+                z-index: 4;
+                transform: rotate(3deg);
+            }
+            figure:hover{
+                position: relative;
+                z-index: 5;
+                background: white;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg) scale(1.2);
+                box-shadow: 3px 5px 15px #000;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="galeria">
+            <figure class="a"><img src="Koala.jpg"><figcaption>Koala</figcaption></figure>
+            <figure class="b"><img src="Penguins.jpg"><figcaption>Pingüinos</figcaption></figure>
+            <figure class="c"><img src="Tulips.jpg"><figcaption>Tulipanes</figcaption></figure>
+            <figure class="d"><img src="Hydrangeas.jpg"><figcaption>Hydrangeas</figcaption></figure>
+        </section>
+        <table>
+            <tr>
+                <td><i></td>
+            </tr>
+        </table>
+    </body>
+</html>

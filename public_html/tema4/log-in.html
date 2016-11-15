@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Formulario</title>
+        <style>
+            #login {
+                position: absolute;
+                height: 240px;
+                width: 400px;
+                padding: 30px;
+                -moz-box-shadow:
+                    0 0 2px rgba(0, 0, 0, 0.2),
+                    0 1px 1px rgba(0, 0, 0, .2),
+                    0 3px 0 #fff,
+                    0 4px 0 rgba(0, 0, 0, .2),
+                    0 6px 0 #fff,
+                    0 7px 0 rgba(0, 0, 0, .2);
+                -webkit-box-shadow:
+                    0 0 2px rgba(0, 0, 0, 0.2),
+                    0 1px 1px rgba(0, 0, 0, .2),
+                    0 3px 0 #fff,
+                    0 4px 0 rgba(0, 0, 0, .2),
+                    0 6px 0 #fff,
+                    0 7px 0 rgba(0, 0, 0, .2);
+                box-shadow:
+                    0 0 2px rgba(0, 0, 0, 0.2),
+                    0 1px 1px rgba(0, 0, 0, .2),
+                    0 3px 0 #fff,
+                    0 4px 0 rgba(0, 0, 0, .2),
+                    0 6px 0 #fff,
+                    0 7px 0 rgba(0, 0, 0, .2);
+            }
+            #login{
+                position: absolute;
+                z-index: 0;
+            }
+            #login:before{
+                content:"";
+                position: absolute;
+                z-index: -1;
+                border: 1px deshed #ccc;
+                top: 5px;
+                bottom: 5px;
+                left: 5px;
+                right: 5px;
+                box-shadow: 0 0 0 1px #fff;
+            }
+            h1{
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0px 2px 0 rgba(0, 0 ,0, 0.5);
+                text-transform: uppercase;
+                text-align: center;
+                color: #666;
+                margin: 0 0 30px 0;
+                letter-spacing: 4px;
+                font: normal 26px/1 Verdana, Helvetica;
+                position: relative;
+            }
+            h1:after, h1:before{
+                background-color: #777;
+                content: "";
+                height: 1px;
+                position: absolute;
+                top: 15px;
+                width: 120px;
+            }
+            h1:after {
+                background-image: -webkit-gradient(linear, left top, right
+                    top, from(#777), to(#fff));
+                background-image: -webkit-linear-gradient(left, #777, #fff);
+                background-image: -moz-linear-gradient(left, #777, #fff);
+                background-image: -ms-linear-gradient(left, #777, #fff);
+                background-image: -o-linear-gradient(left, #777, #fff);
+                background-image: linear-gradient(left, #777, #fff);
+                right: 0;
+            }
+            h1:before {
+                background-image: -webkit-gradient(linear, right top, left
+                    top, from(#777), to(#fff));
+                background-image: -webkit-linear-gradient(right, #777, #fff);
+                background-image: -moz-linear-gradient(right, #777, #fff);
+                background-image: -ms-linear-gradient(right, #777, #fff);
+                background-image: -o-linear-gradient(right, #777, #fff);
+                background-image: linear-gradient(right, #777, #fff);
+                left: 0;
+            }
+            fieldset {
+                border: 0;
+                padding: 0;
+                margin: 0;
+            }
+            #inputs input {
+                padding: 15px 15px 15px 30px;
+                margin: 0 0 10px 0;
+                width: 353px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+            }
+            #inputs input:focus {
+                background-color: #fff;
+                border-color: #e8c291;
+                outline: none;
+                -moz-box-shadow: 0 0 0 1px #e8c291 inset;
+                -webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+                box-shadow: 0 0 0 1px #e8c291 inset;
+            }
+            #actions {
+                margin: 25px 0 0 0;
+            }
+            #submit {
+                /* Diseño de la caja */
+                border-width: 1px;
+                border-style: solid;
+                border-color: #d69e31 #e3a037 #d5982d #e3a037;
+                float: left;
+                height: 35px;
+                padding: 0;
+                width: 120px;
+                cursor: pointer;
+                font: bold 15px Arial, Helvetica;
+                color: #8f5a0a;
+                /* Degradado */
+                background-color: #ffb94b;
+                background-image: -webkit-gradient(linear, left top, left
+                    bottom, from(#fddb6f), to(#ffb94b));
+                /* Bordes redondeados */
+                border-radius: 3px;
+                /* Sombra del texto */
+                text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+                /* Sombra de la caja */
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255,
+                    255, 255, 0.3) inset;
+            }
+            #submit:hover,#submit:focus {
+                background-color: #fddb6f;
+                background-image: -webkit-gradient(linear, left top, left
+                    bottom, from(#ffb94b), to(#fddb6f));
+                background-image: -webkit-linear-gradient(top, #ffb94b, #fddb6f);
+            }
+            #submit:active {
+                outline: none;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+            }
+            #actions a {
+                color: #3151A2;
+                float: right;
+                line-height: 35px;
+                margin-left: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="wrapper"><!-- #wrapper -->
+
+
+            <form id="login">
+                <h1>Log In</h1>
+                <fieldset id="inputs">
+                    <input id="username" type="text" placeholder="Username" autofocus required>   
+                    <input id="password" type="password" placeholder="Password" required>
+                </fieldset>
+                <fieldset id="actions">
+                    <input type="submit" id="submit" value="Log in">
+                    <a href="">Forgot your password?</a><a href="">Register</a>
+                </fieldset>
+            </form>
+
+        </div>
+    </body>
+</html>
