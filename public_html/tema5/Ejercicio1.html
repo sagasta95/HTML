@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/css">
+        .banner {
+            width: 700px;
+            height:300px;
+            border 3px solid red;
+            margin: auto;
+            
+            background-image: url(img/índice.jpg);
+            
+            background-size: 100% 100%;
+            
+            animation: banner 10s infinite;
+            animation-direction:alternate;
+            
+        }
+        
+        @keyframes banner {
+            0%{
+                background-image: url(img/índice.jpg);
+                opacity:1;
+            }
+            
+            25%{
+                background-image: url(img/índice2.jpg);
+            }
+            
+            50%{
+                background-image: url(img/índice3.jpg);
+            }
+            
+            75%{
+                background-image: url(img/índice4.jpg);
+            }
+            
+            100%{
+                background-image: url(img/índice5.jpg);
+            }
+        }            
+        </script>
+    </head>
+    <body>
+        <div class="banner">  
+            
+        </div>
+           
+    </body>
+</html>
