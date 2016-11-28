@@ -9,31 +9,71 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <style>
+            body{
+                perspective: 800px;
+            }
             #cubo{
                 position: relative;
-                width: 500px;
-                height: 500px;
+                margin: 30% auto;
+                width: 200px;
+                height: 200px;
+                transform-style: preserve-3d;
+                animation-name: example;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;     
             }
-            cara1, cara2, cara3, cara4, cara5, cara6{
-                
+            #cubo:hover .cara1{
+                transform: translateZ(-200px);
             }
-            cara1{
-                
+            #cubo:hover .cara2{
+                transform:   rotateY(90deg) translateZ(200px);
             }
-            cara2{
-                
+            #cubo:hover .cara3{
+                transform:   rotateY(-90deg) translateZ(200px);
             }
-            cara3{
-                
+            #cubo:hover .cara4{
+                transform:   rotateX(90deg) translateZ(200px);
             }
-            cara4{
-                
+            #cubo:hover .cara5{
+                transform:   rotateX(-90deg) translateZ(200px);
             }
-            cara5{
-                
+            #cubo:hover .cara6{
+                transform:  translateZ(200px);
             }
-            cara6{
-                
+            #cubo div{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                transition: all 1s ease;
+            }
+            .cara1{
+                transform: translateZ(-100px);
+                background: red;
+            }
+            .cara2{
+                transform: translateX(100px)  rotateY(90deg);
+                background: blue;
+            }
+            .cara3{
+                transform: translateX(-100px)  rotateY(-90deg);
+                background: yellow;
+            }
+            .cara4{
+                transform: translateY(-100px) rotateX(90deg);
+                background: green;
+            }
+            .cara5{
+                transform: translateY(100px) rotateX(-90deg);
+                background: orange;
+            }
+            .cara6{
+                transform: translateZ(100px);
+                background: purple;
+            }
+            @keyframes example {
+                0% {transform: rotateX(0deg) rotateY(0deg)}
+                100% {transform: rotateX(720deg) rotateY(360deg)}
             }
         </style>
     </head>
