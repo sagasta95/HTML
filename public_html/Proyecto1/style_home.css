@@ -5,7 +5,19 @@ header, #slider{
     right: 0;
     height: 400px;
 }
+#black{
+    background-color: black;
+    width: 100%;
+    min-height: 31px;
+}
 
+#log{
+    position: relative;
+    padding: 5px;
+    right: 0;
+    width: 100%;
+    display:table-cell;
+}
 #slider{
     list-style: none;
     background-size: 100% 100%;
@@ -25,21 +37,28 @@ header, #slider{
 
 }
 
+section{
+    position: absolute;
+    top:400px;
+    left: 0;
+    width: 100%;
+    background-color: #aaa;
+    height: 500px;
+}
 
 nav{
-    position: absolute;
-    top: 384px;
+    position: relative;
     width: 100%;
-    height: auto;
+    min-height: 40px;
     background-color: #3caac8;
 }
 #menu{
-    background-color: #3caac8;
-    position: absolute;
+    position: relative;
     width: auto;
     height: auto;
     list-style: none;
     padding: 0;
+    display:table-cell;
 }
 #menu li {
 
