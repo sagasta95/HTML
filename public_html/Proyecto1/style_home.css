@@ -1,0 +1,85 @@
+header, #slider{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: 400px;
+}
+
+#slider{
+    list-style: none;
+    background-size: 100% 100%;
+    animation: slide 20s infinite;
+    animation-direction: alternate;
+    margin: auto;
+    z-index: -1;
+}
+
+#logo{
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+    height:200px;
+    background-size: 100% 100%;
+    background-image: url(img/logo.png);
+
+}
+
+
+nav{
+    position: absolute;
+    top: 384px;
+    width: 100%;
+    height: auto;
+    background-color: #3caac8;
+}
+#menu{
+    background-color: #3caac8;
+    position: absolute;
+    width: auto;
+    height: auto;
+    list-style: none;
+    padding: 0;
+}
+#menu li {
+
+    float: left;
+}
+#menu li a {
+    padding: 5px 5px 5px 10px;
+    display:block;
+    text-decoration: none;
+    color: #333;
+}
+#menu li ul{
+    width: 90px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+#menu li:hover ul{
+    position: absolute;
+    display: block;
+    background-color: #3caac8;
+}
+@keyframes slide {
+    0%, 32% {
+        background-image: url(img/slide1.jpg);
+        opacity: 1;
+    }
+    32%, 33%{
+        opacity: 0.9; 
+    }
+    33%, 66%{
+        background-image: url(img/slide2.jpg);
+        opacity: 1;
+    }
+    66%, 67%{
+        opacity: 0.9; 
+    }
+    67%, 100%{
+        background-image: url(img/slide3.jpg);
+        opacity: 1;
+    }
+}
