@@ -1,152 +1,86 @@
-header, #slider{
-    position: absolute;
-    top: 0px;
-    left: 0;
-    right: 0;
-    height: 400px;
-}
-#black{
-    background-color: black;
-    width: 100%;
-    min-height: 33px;
-}
-
-#log{
-    position: relative;
-    width: 20%;
-    display:table-cell;
-
-}
-#username:focus, #password:focus {
-    background-color: #fff;
-    border: 2px solid #3caac8;
-    outline: none;
-}
-
-#username, #password {
-    margin-top: 5px;
-    margin-right: 5px;
-    border-radius: 5px;
-}
-
-#submit {
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #A9E2F3 #A9E2F3 #3caac8 #3caac8;
-    width: 100px;
-    padding: 0;
-    height: 22px;
-    cursor: pointer;
-    font:  12px Arial, Helvetica;
-    color: white;
-    background-color: #3caac8;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#A9E2F3), to(#3caac8));
-    border-radius: 3px;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-}
-#submit:hover,#submit:focus {
-    background-color: #fddb6f;
-    background-image: -webkit-gradient(linear, left top, left
-        bottom, from(#3caac8), to(#A9E2F3));
-    background-image: -webkit-linear-gradient(top, #3caac8, #A9E2F3);
-}
-#submit:active {
-    outline: none;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-}
-#slider{
-    list-style: none;
-    background-size: 100% 100%;
-    animation: slide 20s infinite;
-    animation-direction: alternate;
-    margin: auto;
-    z-index: -1;
-}
-
-#logo{
-    position: relative;
-    margin: 50px auto;
-    width: 200px;
-    height:200px;
-    background-size: 100% 100%;
-    background-image: url(img/logo.png);
-
-}
-
 section{
     position: absolute;
     top:400px;
     left: 0;
     width: 100%;
     background-color: #aaa;
-    height: 500px;
+    height: 1000px;
 }
 
-nav{
-    position: relative;
+.separador{
     width: 100%;
-    min-height: 34px;
+    background-color: #0080FF;
+    height: 8px;
+}
+.separador2{
+    width: 100%;
     background-color: #3caac8;
-    padding-top: 5px;
+    height: 8px;
 }
-#menu{
-    position: relative;
-    width: auto;
+
+
+#colums{
+    width: 100%; 
+    column-count: 3;
+    column-width: 200px;
+    column-gap: 10px;
+    column-rule: 1px solid #3caac8;
+    background-color: white;
     height: auto;
-    list-style: none;
-    padding: 0;
-    display:table-cell;
-    font:  bold 15px Arial, Helvetica;
 }
-#menu li {
-    float: left;
-    margin-bottom: 5px;
-    margin: 0 5px;
+#colums article{
+    padding: 20px;
+    height: auto;
+    perspective: 800px;
 }
-#menu li a {
-    padding: 5px 5px 5px 5px;
-    display:block;
-    text-decoration: none; 
+
+.rotacion{
+    display: relative;
+    margin: 0px auto;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+.rotacion:hover{
+    transform: rotateY(360deg);
+}
+.cara1, .cara2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.cara1{
+    transform: rotateY(180deg);
+}
+.cara2{
+    z-index: 2;
+}
+#colums article p{
+    text-align: center;
+    font: 15px Arial, Helvetica;
+}
+
+#video{
+    padding: 0.1px;
+    width: 100%;
+    min-height: 400px;
+    background-color: #0080FF;
+}
+#video p{
+    padding-top: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+    font: italic 17px Arial, Helvetica;
     color: white;
 }
-#menu li ul{
-    width: 100px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none;
-}
-#menu li:hover ul{
-    position: absolute;
-    display: block;
-    padding: 5px;
-    background-color: #3caac8;
-}
-#menu li:hover{
-    background-color: #A9E2F3;
-    border-radius: 5px;
-}
-@keyframes slide {
-    0%, 32% {
-        background-image: url(img/slide1.jpg);
-        opacity: 1;
-    }
-    32%, 33%{
-        opacity: 0.9; 
-    }
-    33%, 66%{
-        background-image: url(img/slide2.jpg);
-        opacity: 1;
-    }
-    66%, 67%{
-        opacity: 0.9; 
-    }
-    67%, 100%{
-        background-image: url(img/slide3.jpg);
-        opacity: 1;
-    }
+
+#audio1{
+    border: 1px solid #3caac8;
+    float: left;
+    margin: 20px 20px 10px 20px;
+    width: 35%;
 }
