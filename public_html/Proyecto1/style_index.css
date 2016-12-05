@@ -83,6 +83,7 @@ section{
     float: left;
     margin: 20px 20px 10px 20px;
     width: 35%;
+    max-width: 475px;
 }
 #tablas{
     position: relative;
@@ -95,6 +96,7 @@ table{
     margin: 0 auto;
     top: 20px;
     width: 80%;
+    max-height: 500px;
 }
 
 table, tr, td{
@@ -134,6 +136,7 @@ button img{
 }
 
 button:hover{
+    cursor: pointer;
     background-color: #3caac8;
     background-image: -webkit-gradient(linear, left top, left
         bottom, from(#3caac8), to(#A9E2F3));
@@ -152,12 +155,14 @@ button:hover{
     width: 20.5%;
     background: #eee;
     border: 1px solid #A9E2F3;
-    margin: 2%;
+    margin: 32px 2%;
+    max-width: 250px;
 }
 
 #galeria img:hover{
     position: relative;
     z-index: 1;
+    cursor: pointer;
     background: #A9E2F3;
     transform: rotate(0deg) scale(1.18);
     box-shadow: 3px 5px 15px #000;

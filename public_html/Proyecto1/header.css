@@ -66,7 +66,7 @@ header, #slider{
 #slider{
     list-style: none;
     background-size: 100% 100%;
-    animation: slide 20s infinite;
+    animation: slide 10s infinite;
     animation-direction: alternate;
     margin: auto;
     z-index: -1;
@@ -83,22 +83,16 @@ header, #slider{
 }
 
 @keyframes slide {
-    0%, 32% {
-        background-image: url(img/slide1.jpg);
+    0%, 33% {
+        background-image: url(img/slide8.jpg);
         opacity: 1;
-    }
-    32%, 33%{
-        opacity: 0.9; 
     }
     33%, 66%{
-        background-image: url(img/slide2.jpg);
+        background-image: url(img/slide5.jpg);
         opacity: 1;
     }
-    66%, 67%{
-        opacity: 0.9; 
-    }
-    67%, 100%{
-        background-image: url(img/slide3.jpg);
+    66%, 100%{
+        background-image: url(img/slide9.jpg);
         opacity: 1;
     }
 }
